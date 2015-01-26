@@ -1,7 +1,6 @@
 class ReplaceArfReportBreakdownView < ActiveRecord::Migration
   def self.up
     CreateScaptimonyArfReportBreakdowns.down
-    execute "DROP VIEW scaptimony_arf_report_breakdowns"
     execute <<-SQL
 CREATE VIEW scaptimony_arf_report_breakdowns AS
   SELECT
